@@ -1,0 +1,34 @@
+<!--Exemplo utilizando a seleção de elemento por "ID".-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Primeiros Passos Com DOM</title>
+	<style>
+		body {
+			background-color: rgb(68, 125, 199);
+			color: white;
+			font: normal 18pt Arial;
+		}
+	</style>
+</head>
+<body>
+	<h1>Iniciando Estudos Com DOM</h1>
+	<p>Aqui vai o resultado</p>
+	<p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+	<div id="msg">Clique em mim</div>
+	<script>
+		var d = window.document.getElementById('msg')
+		d.style.background = 'green'  //Aqui alterei a cor do background do elemento selecionado.
+		d.innerText = 'Aguarde...'  //Aqui alterei o texto do elemento selecionado
+		
+		//Eu posso tbm, ao invés de jogar o elemento selecionado para uma variável (como feito acima), selecioná-lo e aplicar ação desejada diretamente nele (como feito abaixo).
+
+		//window.document.getElementById('msg').innerText = 'Aguarde...'     
+		
+	</script>
+</body>
+</html>
