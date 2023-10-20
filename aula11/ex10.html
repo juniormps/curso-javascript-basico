@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DETRAN</title>
+</head>
+<body>
+	<h1>Sistema de Multas</h1>
+	Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h 
+
+	<input type="button" value="Verificar" onclick="calcular()">
+
+	<div id="res"> </div>
+
+	<script>
+		function calcular() {
+			var txtv = window.document.getElementById('txtvel')
+			//A variável 'txtv' recebe a caixa de texto 'input' toda. Além disso, o valor contido nesta é recebido com o tipo TEXTO, mesmo que sejam números. Por isso é necessário atribuir apenas o valor contido nesta caixa de texto a uma outra variável (como feito abaixo)
+			
+			var velocidade = Number(txtv.value)
+			//Aqui a variável 'velocidade' recebe apenas o valor contido na caixa de texto input e altera o tipo do mesmo para 'Number'
+
+			var resposta = window.document.getElementById('res')
+
+			resposta.innerHTML = `<p>Sua velocidade atual é de <strong>${velocidade}</strong> Km/h<p>`   
+			//Aqui acima e abaixo, foram utilizados elementos HTML para formatar, como o <p> e o <strong>
+			
+			if (velocidade > 60) {
+				resposta.innerHTML += `<p>Você foi <strong>MULTADO</strong> por excesso de velocidade</p>`
+			}
+			
+			resposta.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+			//OBSERVAÇÃO: Repare que aqui e acima foi utilizado o '+=' para adicionar coisas ao que já existia na variável 'resposta'. Caso fosse adicionado apenas o '=', o que já existia dentro da variável seria apagado.
+		}
+		
+		
+	</script>
+	
+</body>
+</html>
