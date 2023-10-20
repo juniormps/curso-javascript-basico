@@ -1,0 +1,45 @@
+<!--Exemplo de uma manipulação de dados com interação com o usuário-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Somando Números</title>
+	<style>
+		body {
+			font: normal 18pt Arial;
+			line-height: 2em;
+		}
+
+		input {
+			font: normal 18pt Arial;
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Somando Valores</h1>
+	<input type="number" name="txtn1" id="txtn1"> + 
+	<input type="number" name="txtn2" id="txtn2">
+	<input type="button" value="Somar" onclick="somar()">
+	<div id="res">Resultado...</div>
+
+	<script>
+		function somar() {
+			var tn1 = window.document.getElementById('txtn1')  //Esta variável recebe a caixa 'imput' completa e o valor dentro dela no tipo texto
+			var tn2 = window.document.getElementById('txtn2')  //Idem ao de cima
+			var res = window.document.getElementById('res')
+
+			//As duas variáveis abaixo receberam o 'valor' da caixa 'imput', que por sua vez foi recebido pela variável 'tn1'. Como o valor da caixa 'imput' foi recebido no tipo texto pela variável tn1, foi feita aqui a alteração do tipo para 'Number'. OBS.: IMPORTANTE OBSERVAR QUE A DIGITAÇÃO DO TIPO DEVE INICIAR COM LETRA MAIÚSCULA. CASO CONTRÁRIO DARÁ ERRO.
+			var n1 = Number(tn1.value)  
+			var n2 = Number(tn2.value)
+
+			var s = n1 + n2  //A variável 's' recebe a soma dos valores
+
+			res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
+		}
+	</script>
+</body>
+</html>
