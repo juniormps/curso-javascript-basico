@@ -1,0 +1,10 @@
+//Mesmo exemplo que o anterior, porém estruturando o código de outra forma.
+
+var idade = 55
+if (idade < 16) {
+	console.log(`Não Vota!`)
+} else if (idade >= 16 && idade < 18 || idade >= 65) {
+	console.log(`Voto opcional!`)
+} else {
+	console.log(`Voto obrigatório!`)
+}
