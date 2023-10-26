@@ -5,10 +5,16 @@ function verificar() {
 	var sexo_inserido = window.document.getElementsByName('sexo')
 	var retorno_resultado = window.document.getElementById('resultado')
 
+	retorno_resultado.style.width = '100%'
+	retorno_resultado.style.textAlign = 'center'
+
 	//Abaixo foi criada a imagem no HTML por aqui pelo JavaScript
 	var resultado_idade = ano_atual - ano_inserido.value
 	var imagem = window.document.createElement('img')
 	imagem.setAttribute('id', 'foto')
+	imagem.style.width = '200px'
+	imagem.style.height = '200px'
+	
 	
 
 	if (ano_inserido.value.length != 4 || ano_inserido.value.length > ano_atual ) {

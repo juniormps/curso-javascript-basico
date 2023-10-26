@@ -27,9 +27,29 @@ section {
 	height: 400px;
 	margin: auto;
 	border-radius: 10px;
-	padding: 15px;
+	padding: 20px 20px 20px 30px;
 	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.397);
+	line-height: 2em;
+}
 
+#formulario p:last-child {
+	text-align: center;
+}
+
+#formulario p:first-child > input {
+	width: 70px;
+	height: 23px;
+	text-align: center;
+
+	border: 1.5px solid black;
+	border-radius: 4px;
+}
+
+#formulario p:last-child > input {
+	width: 100px;
+	height: 25px;
+	border: 2px solid black;
+	border-radius: 4px;
 }
 
 footer {
