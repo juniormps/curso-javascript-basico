@@ -4,17 +4,27 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Modelo de Exercício</title>
+	<title>Super Tabuada</title>
 	<link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
 	<header>
-		<h1>Hora do Dia</h1>
+		<h1>Super Tabuada</h1>
 	</header>
 	
 	<section>
-		<div>testando...</div>
-		<div>testando...</div>
+		<div id="formulario">
+				<label for="entrada">Digite um número:</label>
+				<input type="number" name="entrada" id="entrada" required>
+
+				<input type="button" id="botao" value="Gerar Tabuada" onclick="supertabuada()">
+		</div>
+
+		<div id="resultado">
+			<select name="tabuada" id="select_tabuada" size="10">
+				<option value="v1">Digite um número acima.</option>
+			</select>
+		</div>
 	</section>
 	
 	<footer>
